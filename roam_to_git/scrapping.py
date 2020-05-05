@@ -104,7 +104,7 @@ async def _download_rr_archive(document: Page,
 
     logger.debug("Wait for interface to load")
     dot_button = None
-    for _ in range(100):
+    for _ in range(1000):
         # Starting is a little bit slow, so we wait for the button that signal it's ok
         dot_button = await document.querySelector(".bp3-icon-more")
         if dot_button is not None:
